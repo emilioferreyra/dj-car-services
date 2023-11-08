@@ -10,14 +10,14 @@ class UserTimestampMixin(models.Model):
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='created_records',
+        related_name='%(class)s_created_records',
         null=True,
         blank=True
     )
     updated_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='updated_records',
+        related_name='%(class)s_updated_records',
         null=True,
         blank=True
     )
