@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     # Local apps
     'users.apps.UsersConfig',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
