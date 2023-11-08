@@ -27,3 +27,17 @@ class Employee(Person):
 
     class Meta:
         verbose_name_plural = 'Employees'
+
+
+class Customer(Person):
+    last_service_date = models.DateField()
+    birthday = models.DateField(null=True, blank=True)
+    discount = models.DecimalField(decimal_places=2, max_digits=22, null=True, blank=True)
+    credit_limit = models.DecimalField(decimal_places=2, max_digits=22, null=True, blank=True)
+    credit_used = models.DecimalField(decimal_places=2, max_digits=22, null=True, blank=True)
+    credit_available = models.DecimalField(decimal_places=2, max_digits=22, null=True, blank=True)
+    credit_status = models.CharField(max_length=30, null=True, blank=True)
+    credit_status_date = models.DateField(null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'Customers'
