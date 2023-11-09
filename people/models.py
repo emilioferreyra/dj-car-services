@@ -5,7 +5,7 @@ from .enums import PersonTypeEnum
 
 
 class Person(UserTimestampMixin):
-    person_type = models.IntegerField(choices=PersonTypeEnum.choices)
+    person_type = models.IntegerField(choices=PersonTypeEnum.choices, null=True, blank=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
