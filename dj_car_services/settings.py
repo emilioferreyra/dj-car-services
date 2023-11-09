@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'people.apps.PeopleConfig',
     'vehicles.apps.VehiclesConfig',
     'catalog.apps.CatalogConfig',
+    'services.apps.ServicesConfig',
 ]
 
 MIDDLEWARE = [
