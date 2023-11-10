@@ -1,7 +1,5 @@
-from django.db import models
 from django.conf import settings
-from django.db.models.signals import pre_save
-from django.dispatch import receiver
+from django.db import models
 
 
 class UserTimestampMixin(models.Model):
@@ -24,14 +22,3 @@ class UserTimestampMixin(models.Model):
 
     class Meta:
         abstract = True
-
-    def save(self, *args, **kwargs):
-        if not self.created_by:
-            self.created_by = self.updated_by
-        super(UserTimestampMixin, self).save(*args, **kwargs)
-
-
-@receiver(pre_save)
-def set_updated_by(sender, instance, **kwargs):
-    if hasattr(instance, 'created_by') and hasattr(instance, 'updated_by'):
-        instance.updated_by = instance.created_by
