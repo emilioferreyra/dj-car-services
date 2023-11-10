@@ -16,7 +16,6 @@ class UserAdmin(AdminImageMixin, BaseUserAdmin):
             {
                 'classes': ('wide',),
                 'fields': (
-                    'username',
                     'first_name',
                     'last_name',
                     'email',
