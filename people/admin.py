@@ -4,8 +4,10 @@ from .models import Customer
 from .models import Employee
 from .models import Person
 
+from core.admin import UserTimestampMixinAdmin
 
-class CustomBaseAdmin(admin.ModelAdmin):
+
+class CustomBaseAdmin(UserTimestampMixinAdmin):
     list_display = ('first_name', 'last_name', 'email', 'phone')
     list_display_links = ('first_name', 'last_name', 'email', 'phone')
     readonly_fields = ('created_at', 'updated_at', 'created_by', 'updated_by', 'person_type',)
@@ -20,7 +22,7 @@ class EmployeeAdmin(CustomBaseAdmin):
 
 @admin.register(Customer)
 class CustomerAdmin(CustomBaseAdmin):
-    pass
+    readonly_fields = ('credit_used', 'credit_available', 'created_at', 'updated_at', 'created_by', 'updated_by',)
 
 
 @admin.register(Person)
