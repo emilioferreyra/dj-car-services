@@ -21,7 +21,7 @@ class Order(UserTimestampMixin):
         ordering = ('-created_at',)
 
     def __str__(self):
-        return f'{self.customer} {self.vehicle}'
+        return f'{self.vehicle} {self.vehicle.customer}'
 
 
 class OrderItem(UserTimestampMixin):
