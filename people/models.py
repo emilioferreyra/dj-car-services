@@ -13,11 +13,14 @@ class Person(UserTimestampMixin):
     city = models.CharField(max_length=30)
     address = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name_plural = 'People'
+
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
-    class Meta:
-        verbose_name_plural = 'People'
+    def get_full_name(self):
+        return f'{self.first_name} {self.last_name}'
 
 
 class Employee(Person):
