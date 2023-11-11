@@ -8,7 +8,6 @@ class Catalog(models.Model):
     description = models.TextField(blank=True)
     category = models.IntegerField(choices=CategoryEnum.choices, default=CategoryEnum.SERVICE)
     is_active = models.BooleanField(default=True)
-    slug = models.SlugField(max_length=255, unique=True)
     image = models.ImageField(upload_to="catalogs", blank=True, null=True)
     is_featured = models.BooleanField(default=False)
     is_popular = models.BooleanField(default=False)
