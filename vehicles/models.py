@@ -48,3 +48,6 @@ class Vehicle(UserTimestampMixin):
 
     class Meta:
         verbose_name_plural = 'Vehicles'
+
+    def __str__(self):
+        return f'{self.plate_number} - {self.customer.get_full_name()}'
