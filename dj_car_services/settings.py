@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +134,80 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
+
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "DJ Car Services",
+    "site_header": "DJ Car Services",
+    "site_brand": "DJ Car Services",
+    # 'site_logo': 'static/images/logo.png',
+    # 'login_logo': 'static/images/logo.png',
+    "site_logo_classes": "img-circle",
+    # "site_icon": "static/images/favicon.png",
+    "welcome_sign": "Welcome to DJ Car Services",
+    "copyright": "Acme Library Ltd",
+    "search_model": "people.Customer",
+    # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
+    "user_avatar": "avatar",
+    #############
+    # User Menu #
+    #############
+    # Additional links to include in the user menu on the top right ("app" url type is not allowed)
+    "usermenu_links": [
+        {
+            "name": "Support",
+            "url": "https://github.com/farridav/django-jazzmin/issues",
+            "new_window": True,
+        },
+        {"model": "accounts.User"},
+    ],
+    #############
+    # Side Menu #
+    #############
+    # Whether to display the side menu
+    "show_sidebar": True,
+    # Whether to aut expand the menu
+    "navigation_expanded": True,
+    # Hide these apps when generating side menu e.g (auth)
+    "hide_apps": [],
+    # Hide these models when generating side menu (e.g auth.user)
+    "hide_models": [],
+    # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
+    "order_with_respect_to": ["auth", "accounts", "people", "attended"],
+    "icons": {
+        # Core Django app
+        "auth": "fas fa-users-cog",
+        "auth.Group": "fas fa-users",
+        # People
+        "people.Customer": "fas fa-user-tie",
+        "people.Employee": "fas fa-user-cog",
+        "people.Person": "fas fa-user",
+        # Users app
+        "users.User": "fas fa-user-shield",
+        # Catalog
+        "catalog.Catalog": "fas fa-book",
+        # vehicles
+        "vehicles.Make": "fas fa-car",
+        "vehicles.Model": "fas fa-car",
+        "vehicles.Vehicle": "fas fa-car"
+    },
+    # Icons that are used when one is not manually specified
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+    #############
+    # UI Tweaks #
+    #############
+    # Relative paths to custom CSS/JS scripts (must be present in static files)
+    "custom_css": None,
+    "custom_js": None,
+    # Whether to link font from fonts.googleapis.com (use custom_css to supply font otherwise)
+    "use_google_fonts_cdn": True,
+    # Whether to show the UI customizer on the sidebar
+    "show_ui_builder": True,
+    #################
+    # Related Modal #
+    #################
+    # Use modals instead of popups
+    "related_modal_active": True,
+}
