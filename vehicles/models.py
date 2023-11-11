@@ -2,6 +2,7 @@ from django.db import models
 
 from core.models import UserTimestampMixin
 from .enums import VehicleTypeEnum
+from .enums import ColorEnum
 from people.models import Customer
 
 
@@ -36,7 +37,7 @@ class Vehicle(UserTimestampMixin):
     model = models.ForeignKey(Model, on_delete=models.CASCADE)
     year = models.IntegerField()
     last_reading_mileage = models.IntegerField(blank=True, null=True)
-    color = models.CharField(max_length=50)
+    color = models.IntegerField(choices=ColorEnum.choices)
     is_active = models.BooleanField(default=True)
     is_deleted = models.BooleanField(default=False)
     is_archived = models.BooleanField(default=False)
