@@ -1,13 +1,18 @@
 from django import forms
-from .utils import select_vehicle_year  # Importa la función desde tu módulo de utilidades
+from django.forms.widgets import SelectDateWidget
+from datetime import datetime
+
+from .models import Vehicle
 
 
-class VehicleForm(forms.Form):
-    # Utiliza la función select_vehicle_year para obtener la lista de años disponibles
-    year_choices = [(year, year) for year in range(1970, select_vehicle_year() + 1)]
-
-    # Define el campo IntegerField con las opciones de años
-    vehicle_year = forms.IntegerField(
-        label="Select Vehicle Year",
-        widget=forms.Select(choices=year_choices)
+class VehicleForm(forms.ModelForm):
+    year = forms.TypedChoiceField(
+        label='Year',
+        coerce=int,
+        choices=[(year, str(year)) for year in range(datetime.now().year, 1969, -1)]
     )
+
+    class Meta:
+        model = Vehicle
+        fields = '__all__'
+        exclude = ('user',)
