@@ -1,9 +1,10 @@
 from django.db import models
 
 from .enums import CategoryEnum
+from core.models import UserTimestampMixin
 
 
-class Catalog(models.Model):
+class Catalog(UserTimestampMixin):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     category = models.IntegerField(choices=CategoryEnum.choices, default=CategoryEnum.SERVICE)
