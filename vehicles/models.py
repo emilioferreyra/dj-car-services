@@ -18,6 +18,7 @@ class Make(UserTimestampMixin):
 class Model(UserTimestampMixin):
     make = models.ForeignKey(Make, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
+    vehicle_type = models.IntegerField(choices=VehicleTypeEnum.choices)
 
     class Meta:
         verbose_name_plural = 'Models'
@@ -29,12 +30,12 @@ class Model(UserTimestampMixin):
 
 class Vehicle(UserTimestampMixin):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    vehicle_type = models.IntegerField(choices=VehicleTypeEnum.choices)
     plate_number = models.CharField(max_length=10)
     vin = models.CharField(max_length=17, blank=True, null=True)
     make = models.ForeignKey(Make, on_delete=models.CASCADE)
     model = models.ForeignKey(Model, on_delete=models.CASCADE)
     year = models.IntegerField()
+    last_reading_mileage = models.IntegerField(blank=True, null=True)
     color = models.CharField(max_length=50)
     is_active = models.BooleanField(default=True)
     is_deleted = models.BooleanField(default=False)
