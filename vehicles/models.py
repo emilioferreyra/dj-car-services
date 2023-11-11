@@ -42,8 +42,8 @@ class Vehicle(UserTimestampMixin):
     is_deleted = models.BooleanField(default=False)
     is_archived = models.BooleanField(default=False)
     notes = models.TextField(blank=True, null=True)
-    is_default = models.BooleanField(default=False)
-    is_primary = models.BooleanField(default=False)
+    is_default = models.BooleanField(default=True)
+    is_primary = models.BooleanField(default=True)
     is_secondary = models.BooleanField(default=False)
 
     class Meta:
