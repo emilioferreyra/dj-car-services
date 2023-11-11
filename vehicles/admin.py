@@ -3,6 +3,7 @@ from django.contrib import admin
 from core.admin import UserTimestampMixinAdmin
 
 from .models import Make, Model, Vehicle
+from .forms import VehicleForm
 
 
 class ModelInline(admin.TabularInline):
@@ -25,6 +26,7 @@ class ModelAdmin(UserTimestampMixinAdmin):
 
 @admin.register(Vehicle)
 class VehicleAdmin(UserTimestampMixinAdmin):
+    form = VehicleForm
     list_display = ('vin', 'make', 'model', 'year', 'color',)
     list_filter = ('make', 'model', 'year', 'color',)
     search_fields = ('vin', 'make', 'model', 'year', 'color',)
