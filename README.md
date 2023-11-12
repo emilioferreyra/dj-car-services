@@ -71,6 +71,14 @@ Accede al panel de administración para gestionar vehículos, servicios programa
 
 **Contreseña**: demolition
 
+Sitio de administración de django usando Django Jazzmin:
+
+<img src="documentos/Capturas_de_pantalla/Django-Jazzmin.png" width="800" height="500" />
+
+Sitio de administración de Django por defecto:
+
+<img src="documentos/Capturas_de_pantalla/Django-Admin.png" width="800" height="500" />
+
 Los usuarios pueden registrar sus vehículos, programar servicios de mantenimiento y ver su historial de mantenimiento.
 ## Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar esta aplicación de ejemplo, siéntete libre de bifurcar el repositorio y enviar tus solicitudes de extracción.
