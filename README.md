@@ -83,6 +83,12 @@ Sitio de administración de Django por defecto:
 
 Los usuarios pueden registrar sus vehículos, programar servicios de mantenimiento y ver su historial de mantenimiento.
 
+## Diapositivas:
+
+En el siguiente enlace se encuentran las diapositivas de la presentación:
+
+### [Django-Turbo-Cargado-Barcamp-2023.pdf](docs/slideshow/Django-Turbo-Cargado-Barcamp-2023.pdf)
+
 ## Recursos y fuentes de documentación:
 
 Para acceder a la página del proyecto Django, Django-Jazzmin, Django-Packages favor hacer clic [aquí](https://bit.ly/3FUfrEb) 
