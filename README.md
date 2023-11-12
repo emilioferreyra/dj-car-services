@@ -75,11 +75,11 @@ Accede al panel de administración para gestionar vehículos, servicios programa
 
 Sitio de administración de django usando Django Jazzmin:
 
-<img src="documentos/Capturas_de_pantalla/Django-Jazzmin.png" width="800" height="500" />
+<img src="docs/images/Django-Jazzmin.png" width="800" height="500" />
 
 Sitio de administración de Django por defecto:
 
-<img src="documentos/Capturas_de_pantalla/Django-Admin.png" width="800" height="500" />
+<img src="docs/images/Django-Admin.png" width="800" height="500" />
 
 Los usuarios pueden registrar sus vehículos, programar servicios de mantenimiento y ver su historial de mantenimiento.
 
@@ -88,7 +88,7 @@ Los usuarios pueden registrar sus vehículos, programar servicios de mantenimien
 Para acceder a la página del proyecto Django, Django-Jazzmin, Django-Packages favor hacer clic [aquí](https://bit.ly/3FUfrEb) 
 o escanear el siguiente **código QR**:
 
-<img src="documentos/Capturas_de_pantalla/bit.ly_3FUfrEb.png" width="400" height="400" />
+<img src="docs/images/bit.ly_3FUfrEb.png" width="400" height="400" />
 
 ## Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar esta aplicación de ejemplo, siéntete libre de bifurcar el 
