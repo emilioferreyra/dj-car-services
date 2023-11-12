@@ -67,7 +67,7 @@ La aplicación estará disponible en http://127.0.0.1:8000/. Puedes acceder al p
 
 Accede al panel de administración para gestionar vehículos, servicios programados y servicios realizados.
 
-**Usuario**: demo
+**Usuario**: admin
 
 **Contreseña**: demolition
 
