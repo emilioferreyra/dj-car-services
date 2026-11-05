@@ -4,4 +4,4 @@ django-jazzmin==2.6.0
 Pillow==13.0.0
 setuptools==78.1.1
 sorl-thumbnail==12.10.0
-sqlparse==0.5.4
+sqlparse==0.6.0
